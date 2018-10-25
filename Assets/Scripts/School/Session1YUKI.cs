@@ -9,7 +9,7 @@ public class Session1YUKI : MonoBehaviour {
     //scope→public or private
    
     //Numbers
-    int myinteger = 145;
+    int myInteger = 145;
     int largest = int.MaxValue;
     int smallest = int.MinValue;
 
@@ -28,10 +28,12 @@ public class Session1YUKI : MonoBehaviour {
 
     //2.Data structures
     // Scope -- Type -- Values（can take in many values）
-
-    //Array
-    int[] myIntArray = { 1, 2, 3, 4, 5};
-    int[] twentyElementsArray = new int[20];
+    // 区别：1.Array类型的变量在声明的同时必须进行实例化(至少得初始化数组的大小)，而List可以只是先声明。
+         
+    //Array 的几种声明方式
+    int[] myIntArray = { 1, 2, 3, 4, 5};//确定了数组的初值及长度
+    int[] twentyElementsArray = new int[20];//只确定了数组的长度
+    int[] threeElementsArray = new int[3] { 1, 2, 3 };//确定了数组的初值和长度
     int[,] xyArray = new int[4, 5];
 
     double[] doubleArray = { 10.4, 11.23, 45 };
@@ -39,45 +41,36 @@ public class Session1YUKI : MonoBehaviour {
     //List
     List<int> myList = new List<int>();
 
-    //Dictionary
+    //Dictionary<[key], [value]>
     Dictionary<string, string> movingAnimals = new Dictionary<string, string>();
-
 
 
     // 3.Functions
     // Scope -- Type -- Variables -- Body (Instructions)
 
 
-
-
-
-
-
-
-
-
-
     // Use this for initialization
     void Start () {
-        // array adding values
+        // array adding values给数组赋值
         myIntArray[2] = 300;
-        //array retrive values
+        //array retrive values从数组取值
         Debug.Log(myIntArray[1].ToString());
 
-        //list adding values
+        //list adding values给list赋值
         myList.Add(4321);
         myList.Add(41);
         myList.Add(1);
-        //list retrive values
+        //list retrive values从list取值
         Debug.Log(myList[2].ToString());
         Debug.Log(myList[myList.Count-1].ToString());
-
-        //clearing the list
+        //clearing the list清空
         myList.Clear();
 
+
+        //给dictionary赋值
         movingAnimals.Add("aaa", "bbb");
         movingAnimals.Add("ccc", "eee");
-
+        //查找
         if(movingAnimals.ContainsKey("aaa"));
         Debug.Log("A flying animal is :" + movingAnimals.Values);
     }
