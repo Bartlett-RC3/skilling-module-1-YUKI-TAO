@@ -1,8 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using OctavianWorld;
-using RC3students;
+
 
 public class Session2YUKI : MonoBehaviour {
 
@@ -13,7 +12,7 @@ public class Session2YUKI : MonoBehaviour {
     string someName = "name";
     string[] tutorNames = { "Dave", "Tyson", "Jordi","Octavian","Panos"};
 
-    List<student> RC2018 = new List<student>();
+   
 
 	// Use this for initialization
 	void Start () {
